@@ -12,8 +12,7 @@ This analysis focuses on understanding the system first—so product decisions a
 
 This project reverse-engineers HomeTap’s equity product to understand how **time, market conditions, and user behavior** impact investor returns.
 
-👉 [View analysis](https://joemcao.github.io/hometap/)  
-👉 [Full report](https://joemcao.github.io/hometap/calculator-report.html)
+👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology). After cloning, open `calculator-report.html` locally in a browser.
 ---
 
 ## Product context
