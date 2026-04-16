@@ -27,7 +27,13 @@
     th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: right; }
     th { background: #edf2f7; font-weight: 600; }
     td.scenario { text-align: left; font-weight: 500; }
-    td.scenario-move { text-align: left; color: #2d3748; }
+    /* Main share table: center year groups ($ / %) while keeping scenario names left */
+    table.share-grid th,
+    table.share-grid td { text-align: center; }
+    table.share-grid th[rowspan],
+    table.share-grid td.scenario { text-align: left; }
+    th.stated-move, td.scenario-move { text-align: center; }
+    td.scenario-move { color: #2d3748; }
     th.scenario { text-align: left; }
     .chart-container { position: relative; height: 340px; margin-bottom: 16px; }
     .chart-container:last-child { margin-bottom: 0; }
@@ -39,7 +45,7 @@
 Data extracted: February 21, 2026
 Analysis date: April 16, 2026</pre>
   <p class="report-intro">Report generated using the data published by HomeTap about their home equity loan.</p>
-  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: 2026-02-21 19:40:10 UTC · Report built: April 16, 2026 at 4:26 PM · Time period: 1–10 years · 5 appreciation scenarios</p>
+  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: February 21, 2026 at 7:40:10 PM (UTC) · Report built: April 16, 2026 at 4:30:43 PM · Time period: 1–10 years · 5 appreciation scenarios</p>
 
   <div class="summary">
     <div class="summary-card">
@@ -58,7 +64,7 @@ Analysis date: April 16, 2026</pre>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th class="scenario">Scenario</th><th>Stated move</th></tr>
+          <tr><th class="scenario">Scenario</th><th class="stated-move">Stated move</th></tr>
         </thead>
         <tbody>
           <tr><td class="scenario">Large Decline</td><td class="scenario-move">−8% total</td></tr><tr><td class="scenario">Moderate Decline</td><td class="scenario-move">−4% total</td></tr><tr><td class="scenario">No Change</td><td class="scenario-move">0%</td></tr><tr><td class="scenario">Moderate appreciation</td><td class="scenario-move">+3.91% annual</td></tr><tr><td class="scenario">High appreciation</td><td class="scenario-move">+8% annual</td></tr>
@@ -72,7 +78,7 @@ Analysis date: April 16, 2026</pre>
   <section>
     <h2>Table: HomeTap share by scenario and year</h2>
     <div class="table-wrap">
-      <table>
+      <table class="share-grid">
         <thead>
           <tr><th rowspan="2">Scenario</th><th colspan="2">Year 0</th><th colspan="2">Year 1</th><th colspan="2">Year 2</th><th colspan="2">Year 3</th><th colspan="2">Year 4</th><th colspan="2">Year 5</th><th colspan="2">Year 6</th><th colspan="2">Year 7</th><th colspan="2">Year 8</th><th colspan="2">Year 9</th><th colspan="2">Year 10</th></tr>
           <tr><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th><th>$</th><th>%</th></tr>

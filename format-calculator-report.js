@@ -98,16 +98,13 @@ function main() {
   console.log("Wrote", TABLE_CSV);
 
   const tableMtime = statSync(TABLE_CSV).mtime;
-  const generatedLabel = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "long",
-    timeStyle: "short",
-  }).format(tableMtime);
+  const generatedLabel = formatMetaDateTime(tableMtime);
 
   let extractedLabel = "unknown (no extractedAt in JSON)";
   let extractedDateCalendar = "—";
   if (data.extractedAt) {
     const d = new Date(data.extractedAt);
-    extractedLabel = `${d.toISOString().replace("T", " ").slice(0, 19)} UTC`;
+    extractedLabel = `${formatMetaDateTime(d, "UTC")} (UTC)`;
     extractedDateCalendar = new Intl.DateTimeFormat("en-US", {
       year: "numeric",
       month: "long",
@@ -217,7 +214,13 @@ function main() {
     th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: right; }
     th { background: #edf2f7; font-weight: 600; }
     td.scenario { text-align: left; font-weight: 500; }
-    td.scenario-move { text-align: left; color: #2d3748; }
+    /* Main share table: center year groups ($ / %) while keeping scenario names left */
+    table.share-grid th,
+    table.share-grid td { text-align: center; }
+    table.share-grid th[rowspan],
+    table.share-grid td.scenario { text-align: left; }
+    th.stated-move, td.scenario-move { text-align: center; }
+    td.scenario-move { color: #2d3748; }
     th.scenario { text-align: left; }
     .chart-container { position: relative; height: 340px; margin-bottom: 16px; }
     .chart-container:last-child { margin-bottom: 0; }
@@ -248,7 +251,7 @@ Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th class="scenario">Scenario</th><th>Stated move</th></tr>
+          <tr><th class="scenario">Scenario</th><th class="stated-move">Stated move</th></tr>
         </thead>
         <tbody>
           ${scenarioDriverRows}
@@ -262,7 +265,7 @@ Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
   <section>
     <h2>Table: HomeTap share by scenario and year</h2>
     <div class="table-wrap">
-      <table>
+      <table class="share-grid">
         <thead>
           <tr><th rowspan="2">Scenario</th>${yearHeaders}</tr>
           <tr>${subHeaders}</tr>
@@ -421,6 +424,15 @@ Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
 
   writeFileSync(REPORT_HTML, html, "utf8");
   console.log("Wrote", REPORT_HTML);
+}
+
+/** Same pattern for meta line: “April 16, 2026 at 4:29:00 PM” (local) vs UTC for snapshot time. */
+function formatMetaDateTime(date, timeZone) {
+  return new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+    timeStyle: "medium",
+    ...(timeZone ? { timeZone } : {}),
+  }).format(date);
 }
 
 function escapeHtml(s) {
