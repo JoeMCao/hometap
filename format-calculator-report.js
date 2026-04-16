@@ -8,7 +8,7 @@
  * Run: node format-calculator-report.js
  */
 
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, statSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -16,6 +16,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const INPUT_FILE = join(__dirname, "calculator-responses.json");
 const TABLE_CSV = join(__dirname, "calculator-table.csv");
 const REPORT_HTML = join(__dirname, "calculator-report.html");
+
+/** Public calculator this project mirrors (same home_value query as extractors). */
+const HOMETAP_CALCULATOR_PAGE =
+  "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator";
 
 function main() {
   const raw = readFileSync(INPUT_FILE, "utf8");
@@ -81,6 +85,18 @@ function main() {
   }
   writeFileSync(TABLE_CSV, csvRows.join("\n"), "utf8");
   console.log("Wrote", TABLE_CSV);
+
+  const tableMtime = statSync(TABLE_CSV).mtime;
+  const generatedLabel = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+    timeStyle: "short",
+  }).format(tableMtime);
+
+  let extractedLabel = "unknown (no extractedAt in JSON)";
+  if (data.extractedAt) {
+    const d = new Date(data.extractedAt);
+    extractedLabel = `${d.toISOString().replace("T", " ").slice(0, 19)} UTC`;
+  }
 
   // --- Chart data for HTML ---
   const chartDatasetsDollars = scenarioOrder.map((label, i) => {
@@ -151,18 +167,21 @@ function main() {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Hometap Calculator Report</title>
+  <title>HomeTap Calculator Report</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <style>
     body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 24px; background: #f8f9fa; }
     h1 { color: #1a1a2e; margin-bottom: 8px; }
+    .report-intro { color: #4a5568; font-size: 16px; line-height: 1.5; max-width: 52rem; margin: 0 0 20px 0; }
     .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
+    .meta code { font-size: 12px; background: #e2e8f0; padding: 1px 6px; border-radius: 4px; }
     .summary { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
     .summary-card { background: #fff; border-radius: 12px; padding: 16px 20px; min-width: 200px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
     .summary-card .label { font-size: 12px; color: #718096; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 4px; }
     .summary-card .value { font-size: 22px; font-weight: 600; color: #1a1a2e; }
     .assumption-note { font-size: 14px; color: #4a5568; line-height: 1.5; margin-bottom: 24px; padding: 14px 18px; background: #edf2f7; border-radius: 8px; border-left: 4px solid #4299e1; }
     .assumption-note strong { color: #2d3748; }
+    .assumption-note a { color: #2b6cb0; word-break: break-all; }
     section { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
     section h2 { margin-top: 0; color: #2d3748; font-size: 18px; }
     .how-calc { font-size: 14px; color: #4a5568; line-height: 1.5; margin-top: 8px; padding: 12px; background: #f7fafc; border-radius: 8px; }
@@ -177,8 +196,9 @@ function main() {
   </style>
 </head>
 <body>
-  <h1>Hometap Calculator Report</h1>
-  <p class="meta">Source: calculator-responses.json · Time period: 1–10 years · 5 appreciation scenarios</p>
+  <h1>HomeTap Calculator Report</h1>
+  <p class="report-intro">Report generated using the data published by HomeTap about their home equity loan.</p>
+  <p class="meta">Source: calculator-responses.json · <strong>Data extracted:</strong> ${extractedLabel} (<code>extractedAt</code> in JSON) · <strong>Report and table generated:</strong> ${generatedLabel} (when <code>calculator-table.csv</code> was written this run) · Time period: 1–10 years · 5 appreciation scenarios</p>
 
   <div class="summary">
     <div class="summary-card">
@@ -191,10 +211,10 @@ function main() {
     </div>
   </div>
 
-  <p class="assumption-note"><strong>Scenarios:</strong> Price <strong>depreciation</strong> (e.g. Large Decline, Moderate Decline) is applied as a one-time hit in the first year. Price <strong>appreciation</strong> (e.g. Moderate appreciation, High appreciation) compounds every year.</p>
+  <p class="assumption-note"><strong>Scenarios:</strong> Price <strong>depreciation</strong> (e.g. Large Decline, Moderate Decline) is applied as a one-time hit in the first year. Price <strong>appreciation</strong> (e.g. Moderate appreciation, High appreciation) compounds every year. This reflects how those paths are calculated, as in <a href="${HOMETAP_CALCULATOR_PAGE}" target="_blank" rel="noopener noreferrer">${HOMETAP_CALCULATOR_PAGE}</a>.</p>
 
   <section>
-    <h2>Table: Hometap share by scenario and year</h2>
+    <h2>Table: HomeTap share by scenario and year</h2>
     <div class="table-wrap">
       <table>
         <thead>
@@ -209,12 +229,12 @@ function main() {
   </section>
 
   <section>
-    <h2>Hometap share (dollars) over time</h2>
+    <h2>HomeTap share (dollars) over time</h2>
     <div class="chart-container"><canvas id="chartDollars"></canvas></div>
   </section>
 
   <section>
-    <h2>Hometap share (percent) over time</h2>
+    <h2>HomeTap share (percent) over time</h2>
     <div class="chart-container"><canvas id="chartPercent"></canvas></div>
   </section>
 
@@ -224,8 +244,8 @@ function main() {
   </section>
 
   <section>
-    <h2>Hometap IRR by scenario over time</h2>
-    <p class="how-calc"><strong>How IRR is calculated:</strong> Hometap invests \$${Number(investmentAmount).toLocaleString()} at settlement (t = 0) and receives the Hometap share in dollars when the homeowner settles at year <em>N</em>. The annualized internal rate of return is the rate <code>r</code> such that the present value of the payoff equals the initial investment: <code>Investment = Hometap share / (1 + r)<sup>N</sup></code>, so <code>IRR = (Hometap share ÷ Investment)<sup>1/N</sup> − 1</code>, shown here as a percentage. Each point is the IRR if settlement occurs at that year under that appreciation scenario.</p>
+    <h2>HomeTap IRR by scenario over time</h2>
+    <p class="how-calc"><strong>How IRR is calculated:</strong> HomeTap invests \$${Number(investmentAmount).toLocaleString()} at settlement (t = 0) and receives the HomeTap share in dollars when the homeowner settles at year <em>N</em>. The annualized internal rate of return is the rate <code>r</code> such that the present value of the payoff equals the initial investment: <code>Investment = HomeTap share / (1 + r)<sup>N</sup></code>, so <code>IRR = (HomeTap share ÷ Investment)<sup>1/N</sup> − 1</code>, shown here as a percentage. Each point is the IRR if settlement occurs at that year under that appreciation scenario.</p>
     <div class="chart-container"><canvas id="chartIRR"></canvas></div>
   </section>
 
@@ -259,7 +279,7 @@ function main() {
     });
 
     new Chart(document.getElementById('chartDollars'), {
-      ...chartOpts(null, 'Hometap share ($)'),
+      ...chartOpts(null, 'HomeTap share ($)'),
       data: {
         labels: years.map(y => y + ' yr'),
         datasets: scenarioOrder.map((label, i) => {
@@ -278,7 +298,7 @@ function main() {
     });
 
     new Chart(document.getElementById('chartPercent'), {
-      ...chartOpts(null, 'Hometap share (%)'),
+      ...chartOpts(null, 'HomeTap share (%)'),
       data: {
         labels: years.map(y => y + ' yr'),
         datasets: scenarioOrder.map((label, i) => {
@@ -343,7 +363,7 @@ function main() {
             ticks: { stepSize: 1 }
           },
           y: {
-            title: { display: true, text: 'Hometap IRR (%)' },
+            title: { display: true, text: 'HomeTap IRR (%)' },
             beginAtZero: false
           }
         }
