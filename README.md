@@ -1,14 +1,29 @@
 # HomeTap Cap Analysis
 
+---
+
+## TL;DR
+
+HomeTap’s returns are driven by timing and home price appreciation—not static ownership.
+
+→ Returns decay over time and collapse in low-appreciation markets  
+→ Growth without geographic discipline can turn a high-return product into a low-return asset  
+
+This is not just a lending product—it is a capital allocation system shaped by user behavior, market conditions, and product design.
+
+→ Product decisions in systems like this require alignment across product, finance, and compliance—not just UX or growth.
+
+---
+
 ## L1 — What this is
 
-Most PMs optimize UX or growth without fully understanding the underlying economic and customer dynamics—leading to well-executed products that fail to impact outcomes.
-
-This project focuses on understanding the **economic engine** behind HomeTap’s product—where one decision becomes clear:
+I reverse-engineered HomeTap’s product to understand how design decisions translate into capital allocation outcomes—and why one thing becomes clear:
 
 → Growth without geographic discipline can turn a high-return product into a low-return asset.
 
-👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology)
+👉 **[View full analysis](https://joemcao.github.io/hometap/calculator-report.html)**
+
+---
 
 ### Repository layout
 
@@ -17,9 +32,7 @@ This project focuses on understanding the **economic engine** behind HomeTap’s
 | [`scripts/`](./scripts/) | Extractors and report builder (`npm run extract`, `extract:all`, `report`, etc.) |
 | [`data/`](./data/) | Snapshot `calculator-responses.json` and generated `calculator-table.csv` |
 | [`calculator-report.html`](./calculator-report.html) | Generated HTML report (kept at repo root for GitHub Pages) |
-| [`assets/`](./assets/) | Images referenced by this README (add files here as needed) |
-
-After cloning: `npm install` → optional `npm run extract:all` to refresh data → `npm run report` to regenerate the HTML and CSV.
+| [`assets/`](./assets/) | Images referenced by this README |
 
 ---
 
@@ -60,7 +73,7 @@ In appreciation scenarios, IRR remains meaningfully higher (~11–16% by year 10
 ---
 
 ### 4. Timing matters more than percentage share
-Even when Hometap’s share % stabilizes, IRR continues to decline over time.
+Even when HomeTap’s share % stabilizes, IRR continues to decline over time.
 
 → Time decay dominates the economics, not just payout structure.
 
@@ -84,35 +97,31 @@ In declining price scenarios, the homeowner’s obligation is based on a reduced
 
 ---
 
-### 7. The product behaves like a time-dependent equity option
-HomeTap’s payoff structure resembles an embedded option on home value, where:
+### 7. The product behaves like a time-dependent contract on future value
+HomeTap’s payoff depends on both **timing** and **price path**, not a fixed ownership stake.
 
-- The homeowner exchanges a portion of future appreciation  
-- The effective “strike” and “share” depend on timing and price path  
-- Outcomes vary significantly based on when settlement occurs  
+- The homeowner exchanges future appreciation, not static equity  
+- Outcomes vary significantly depending on when settlement occurs  
+- The effective “share” is determined at exit, not at origination  
 
-→ This creates a path-dependent payoff structure, similar to an option with time-varying terms.
-
-Importantly:
-- The homeowner does not transfer a fixed ownership stake upfront  
-- The effective share of value is determined at settlement based on contract terms  
-
-→ The product is better understood as a **contract on future value**, not static equity ownership.
+→ The product is better understood as a **contract on future value**, not traditional equity ownership.
 
 ---
 
 ## L3 — Product implications
 
-This analysis highlights a core principle for financial products:
-
 > Product decisions must be grounded in a deep understanding of the underlying economic model — not just user growth or UX.
+
+---
 
 ### 1. User behavior directly impacts returns
 Investor outcomes vary significantly based on when the homeowner exits.
 
 → Product design (UX, messaging, incentives) directly shapes user behavior—and therefore realized returns.
 
-→ Even small changes in how information is presented (e.g., amount owed vs. share of appreciation) can shift user decisions, turning UX into a financial lever, not just a usability concern.
+→ Even small changes in how information is presented (e.g., amount owed vs. share of appreciation) can shift user decisions, turning UX into a financial lever.
+
+→ This creates potential for adverse selection, where users with different expectations about future home prices may time exits in ways that impact portfolio returns.
 
 ---
 
@@ -126,6 +135,8 @@ Returns are highly sensitive to:
 → Growth is not just acquiring users—it is allocating capital across markets with different return profiles.
 
 → In practice, this turns expansion into a **portfolio construction problem**, not just a distribution strategy.
+
+→ Expanding into the wrong markets can collapse returns to near risk-free levels while still taking equity risk, fundamentally breaking the business model.
 
 ---
 
@@ -144,56 +155,43 @@ HomeTap has limited long-term realized outcomes (products <10 years old).
 
 → Modeled returns may differ from realized performance as cohorts mature.
 
+---
+
 ### 5. Communication and regulatory considerations
+→ Product, growth, and compliance must be designed as a unified system.
 
-Financial products like this sit at the intersection of economics, user behavior, and regulation.
+→ Decisions around pricing, communication, and expansion carry both economic and regulatory consequences.
 
-→ How outcomes are communicated (e.g., appreciation scenarios, downside cases) can materially affect user understanding and decision-making.
+---
 
-→ Misalignment between product economics and user perception introduces potential risks around transparency and consumer protection.
+## L4 — Decision framework
 
-Additionally, geographic expansion introduces regulatory complexity:
+Product decisions must operate across:
 
-→ Different markets may have varying fair lending and consumer protection considerations  
-→ Product performance and regulatory exposure may evolve differently across geographies  
+- **Capital allocation**
+- **User behavior**
+- **Product framing**
 
-→ Product, growth, and compliance cannot be separated—they must be designed as a unified system.
+→ These cannot be separated without degrading outcomes.
 
 ---
 
 ### Takeaway
 
-Strong product management in financial systems requires:
-- Understanding how value is created  
-- Knowing what variables actually drive outcomes  
-- Designing experiences that align user behavior with sustainable economics  
+Financial products are defined by how product decisions shape capital allocation, user behavior, and long-term returns.
 
-This is not a UI problem — it’s a system design problem.
+A PM optimizing growth without understanding IRR is effectively deploying capital blindly.
 
 ---
 
 ## What I did
 
 - Extracted calculator outputs across 10-year horizons and 5 market scenarios  
-- Modeled HomeTap’s share evolution (dollars and %)  
-- Estimated investor IRR across scenarios  
-- Built an interactive report for exploration  
+- Modeled HomeTap’s share evolution  
+- Estimated IRR across scenarios  
 
 ---
 
-## Why this matters
-
-Most PMs focus on growth and UX.
-
-This project demonstrates the ability to:
-- Break down financial products into economic drivers  
-- Connect user behavior to business outcomes  
-- Make decisions under uncertainty  
-
 ## Scope and limitations
 
-This analysis is based on publicly available calculator outputs and simplified assumptions.
-
-It focuses on directional behavior across time and market scenarios—not precise replication of HomeTap’s internal performance.
-
-The goal is to understand the **structure of the product**, not to produce exact forecasts.
+This analysis is directional and based on public calculator outputs—not internal performance data.
