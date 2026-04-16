@@ -27,6 +27,8 @@
     th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: right; }
     th { background: #edf2f7; font-weight: 600; }
     td.scenario { text-align: left; font-weight: 500; }
+    td.scenario-move { text-align: left; color: #2d3748; }
+    th.scenario { text-align: left; }
     .chart-container { position: relative; height: 340px; margin-bottom: 16px; }
     .chart-container:last-child { margin-bottom: 0; }
   </style>
@@ -37,7 +39,7 @@
 Data extracted: February 21, 2026
 Analysis date: April 16, 2026</pre>
   <p class="report-intro">Report generated using the data published by HomeTap about their home equity loan.</p>
-  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: 2026-02-21 19:40:10 UTC · Report built: April 16, 2026 at 3:54 PM · Time period: 1–10 years · 5 appreciation scenarios</p>
+  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: 2026-02-21 19:40:10 UTC · Report built: April 16, 2026 at 4:22 PM · Time period: 1–10 years · 5 appreciation scenarios</p>
 
   <div class="summary">
     <div class="summary-card">
@@ -49,6 +51,21 @@ Analysis date: April 16, 2026</pre>
       <div class="value">$50,000 <span style="font-size:14px;font-weight:400;color:#718096">(10% of house value)</span></div>
     </div>
   </div>
+
+  <section>
+    <h2>Calculator market scenarios</h2>
+    <p class="how-calc" style="margin-top:0;margin-bottom:14px">These match the five options in the HomeTap calculator’s market dropdown. Decline paths use a one-time <strong>total</strong> change; appreciation paths use an <strong>annual</strong> rate (compounded each year). Labels and percentages below come from this snapshot’s API fields (<code>appreciation_percent</code>).</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th class="scenario">Scenario</th><th>Stated move</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scenario">Large Decline</td><td class="scenario-move">−8% total</td></tr><tr><td class="scenario">Moderate Decline</td><td class="scenario-move">−4% total</td></tr><tr><td class="scenario">No Change</td><td class="scenario-move">0%</td></tr><tr><td class="scenario">Moderate appreciation</td><td class="scenario-move">+3.91% annual</td></tr><tr><td class="scenario">High appreciation</td><td class="scenario-move">+8% annual</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <p class="assumption-note"><strong>Scenarios:</strong> Price <strong>depreciation</strong> (e.g. Large Decline, Moderate Decline) is applied as a one-time hit in the first year. Price <strong>appreciation</strong> (e.g. Moderate appreciation, High appreciation) compounds every year. This reflects how those paths are calculated, as in <a href="https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator" target="_blank" rel="noopener noreferrer">https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator</a>.</p>
 

@@ -73,6 +73,14 @@ function main() {
     scenarioOrder.push(...byScenario.keys());
   }
 
+  /** First occurrence of each scenario’s `appreciation_percent` from the snapshot (matches calculator dropdown). */
+  const scenarioParamsByLabel = new Map();
+  for (const r of data.responses || []) {
+    const s = r.scenarios?.[0];
+    if (!s?.label || scenarioParamsByLabel.has(s.label)) continue;
+    scenarioParamsByLabel.set(s.label, s.appreciation_percent);
+  }
+
   // --- Table: CSV (wide format: one row per scenario, columns per year $ and %) ---
   const csvHeaders = ["Scenario", ...years.flatMap((y) => [`Year ${y} ($)`, `Year ${y} (%)`])];
   const csvRows = [csvHeaders.join(",")];
@@ -164,6 +172,14 @@ function main() {
   const yearHeaders = years.map((y) => `<th colspan="2">Year ${y}</th>`).join("");
   const subHeaders = years.map(() => "<th>$</th><th>%</th>").join("");
 
+  const scenarioDriverRows = scenarioOrder
+    .map((label) => {
+      const ap = scenarioParamsByLabel.get(label);
+      const driver = formatAppreciationDriver(ap);
+      return `<tr><td class="scenario">${escapeHtml(label)}</td><td class="scenario-move">${escapeHtml(driver)}</td></tr>`;
+    })
+    .join("");
+
   const colors = [
     "rgb(136, 78, 160)",
     "rgb(237, 100, 100)",
@@ -201,6 +217,8 @@ function main() {
     th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: right; }
     th { background: #edf2f7; font-weight: 600; }
     td.scenario { text-align: left; font-weight: 500; }
+    td.scenario-move { text-align: left; color: #2d3748; }
+    th.scenario { text-align: left; }
     .chart-container { position: relative; height: 340px; margin-bottom: 16px; }
     .chart-container:last-child { margin-bottom: 0; }
   </style>
@@ -223,6 +241,21 @@ Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
       <div class="value">\$${Number(investmentAmount).toLocaleString()} <span style="font-size:14px;font-weight:400;color:#718096">(${investmentPercent}% of house value)</span></div>
     </div>
   </div>
+
+  <section>
+    <h2>Calculator market scenarios</h2>
+    <p class="how-calc" style="margin-top:0;margin-bottom:14px">These match the five options in the HomeTap calculator’s market dropdown. Decline paths use a one-time <strong>total</strong> change; appreciation paths use an <strong>annual</strong> rate (compounded each year). Labels and percentages below come from this snapshot’s API fields (<code>appreciation_percent</code>).</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th class="scenario">Scenario</th><th>Stated move</th></tr>
+        </thead>
+        <tbody>
+          ${scenarioDriverRows}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <p class="assumption-note"><strong>Scenarios:</strong> Price <strong>depreciation</strong> (e.g. Large Decline, Moderate Decline) is applied as a one-time hit in the first year. Price <strong>appreciation</strong> (e.g. Moderate appreciation, High appreciation) compounds every year. This reflects how those paths are calculated, as in <a href="${HOMETAP_CALCULATOR_PAGE}" target="_blank" rel="noopener noreferrer">${HOMETAP_CALCULATOR_PAGE}</a>.</p>
 
@@ -396,6 +429,22 @@ function escapeHtml(s) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+/** Human-readable line like the calculator dropdown: total vs annual. */
+function formatAppreciationDriver(ap) {
+  if (ap == null || typeof ap.value !== "number") return "—";
+  const v = ap.value;
+  if (v === 0) return "0%";
+  const absPct = Math.abs(v * 100);
+  if (ap.annualized) {
+    const sign = v > 0 ? "+" : "−";
+    const rounded = Math.round(absPct * 100) / 100;
+    const pctStr = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(2);
+    return `${sign}${pctStr}% annual`;
+  }
+  const sign = v < 0 ? "−" : "+";
+  return `${sign}${absPct}% total`;
 }
 
 main();

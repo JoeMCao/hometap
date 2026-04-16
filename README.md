@@ -2,15 +2,11 @@
 
 ## L1 — What this is
 
-Most PMs optimize UX. This project focuses on understanding the **economic engine** behind HomeTap’s product—how time, market conditions, and user behavior actually drive returns.
+Most PMs optimize UX or growth without fully understanding the underlying economic and customer dynamics—leading to well-executed products that fail to impact outcomes.
 
-In my experience building financial products, teams often prioritize surface-level improvements without a clear understanding of the underlying economic and customer dynamics.
+This project focuses on understanding the **economic engine** behind HomeTap’s product—where one decision becomes clear:
 
-This leads to well-executed products that fail to impact outcomes.
-
-This analysis focuses on understanding the system first—so product decisions are grounded in how value is actually created.
-
-This project reverse-engineers HomeTap’s equity product to understand how **time, market conditions, and user behavior** impact investor returns.
+→ Growth without geographic discipline can turn a high-return product into a low-return asset.
 
 👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology)
 ---
@@ -102,7 +98,9 @@ This analysis highlights a core principle for financial products:
 ### 1. User behavior directly impacts returns
 Investor outcomes vary significantly based on when the homeowner exits.
 
-→ Product design (UX, messaging, incentives) can materially influence financial outcomes.
+→ Product design (UX, messaging, incentives) directly shapes user behavior—and therefore realized returns.
+
+→ Even small changes in how information is presented (e.g., amount owed vs. share of appreciation) can shift user decisions, turning UX into a financial lever, not just a usability concern.
 
 ---
 
@@ -111,7 +109,11 @@ Returns are highly sensitive to:
 - Holding period (IRR decay over time)
 - Home price appreciation
 
-→ Product strategy must account for macro exposure, not just user adoption.
+→ Product performance is driven as much by **where and when** capital is deployed as by user behavior.
+
+→ Growth is not just acquiring users—it is allocating capital across markets with different return profiles.
+
+→ In practice, this turns expansion into a **portfolio construction problem**, not just a distribution strategy.
 
 ---
 
@@ -129,6 +131,21 @@ Without understanding the economic engine, teams may:
 HomeTap has limited long-term realized outcomes (products <10 years old).
 
 → Modeled returns may differ from realized performance as cohorts mature.
+
+### 5. Communication and regulatory considerations
+
+Financial products like this sit at the intersection of economics, user behavior, and regulation.
+
+→ How outcomes are communicated (e.g., appreciation scenarios, downside cases) can materially affect user understanding and decision-making.
+
+→ Misalignment between product economics and user perception introduces potential risks around transparency and consumer protection.
+
+Additionally, geographic expansion introduces regulatory complexity:
+
+→ Different markets may have varying fair lending and consumer protection considerations  
+→ Product performance and regulatory exposure may evolve differently across geographies  
+
+→ Product, growth, and compliance cannot be separated—they must be designed as a unified system.
 
 ---
 
