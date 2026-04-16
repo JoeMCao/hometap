@@ -1,0 +1,2657 @@
+{
+  "extractedAt": "2026-02-21T19:40:10.518Z",
+  "sourceUrl": "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator",
+  "totalResponses": 50,
+  "responses": [
+    {
+      "_id": 1,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 1
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:57.516Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 1
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 60000,
+            "percent": 0.13043
+          },
+          "homeowner_share": {
+            "dollars": 400000,
+            "percent": 0.86957
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 2,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 1
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:57.766Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 1
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 60000,
+            "percent": 0.125
+          },
+          "homeowner_share": {
+            "dollars": 420000,
+            "percent": 0.875
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 3,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 1
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:58.018Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 1
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 60000,
+            "percent": 0.12
+          },
+          "homeowner_share": {
+            "dollars": 440000,
+            "percent": 0.88
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 4,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 1
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:58.277Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 1
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 60000,
+            "percent": 0.11548
+          },
+          "homeowner_share": {
+            "dollars": 459550,
+            "percent": 0.88452
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 519549.99999999994
+        }
+      ]
+    },
+    {
+      "_id": 5,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 1
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:58.526Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 1
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 60000,
+            "percent": 0.11111
+          },
+          "homeowner_share": {
+            "dollars": 480000,
+            "percent": 0.88889
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 540000
+        }
+      ]
+    },
+    {
+      "_id": 6,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 2
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:58.768Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 2
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 7,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 2
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:59.023Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 2
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 8,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 2
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:59.281Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 2
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.144
+          },
+          "homeowner_share": {
+            "dollars": 428000,
+            "percent": 0.856
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 9,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 2
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:59.534Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 2
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.13337
+          },
+          "homeowner_share": {
+            "dollars": 467864.4,
+            "percent": 0.86663
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 539864.4049999999
+        }
+      ]
+    },
+    {
+      "_id": 10,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 2
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:39:59.788Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 2
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.12346
+          },
+          "homeowner_share": {
+            "dollars": 511200,
+            "percent": 0.87654
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 583200
+        }
+      ]
+    },
+    {
+      "_id": 11,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 3
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:00.041Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 3
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 12,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 3
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:00.298Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 3
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 13,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 3
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:00.556Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 3
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 75000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 425000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 14,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 3
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:00.828Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 3
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 84145.97,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 476827.13,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 560973.1032354998
+        }
+      ]
+    },
+    {
+      "_id": 15,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 3
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:01.141Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 3
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 86400,
+            "percent": 0.13717
+          },
+          "homeowner_share": {
+            "dollars": 543456,
+            "percent": 0.86283
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 629856.0000000001
+        }
+      ]
+    },
+    {
+      "_id": 16,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 4
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:01.383Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 4
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 17,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 4
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:01.637Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 4
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 18,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 4
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:01.913Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 4
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 88900,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 411100,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 19,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 4
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:02.160Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 4
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 103640.89,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 479266.26,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 582907.1515720079
+        }
+      ]
+    },
+    {
+      "_id": 20,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 4
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:02.409Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 4
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 103680,
+            "percent": 0.15242
+          },
+          "homeowner_share": {
+            "dollars": 576564.48,
+            "percent": 0.84758
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 680244.4800000001
+        }
+      ]
+    },
+    {
+      "_id": 21,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 5
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:02.673Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 5
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 22,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 5
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:02.922Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 5
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 23,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 5
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:03.428Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 5
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 88900,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 411100,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 24,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 5
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:03.713Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 5
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 107693.25,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 498005.57,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 605698.8211984733
+        }
+      ]
+    },
+    {
+      "_id": 25,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 5
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:03.991Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 5
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 124416,
+            "percent": 0.16935
+          },
+          "homeowner_share": {
+            "dollars": 610248.04,
+            "percent": 0.83065
+          },
+          "is_share_capped": true,
+          "crr_percent": 20,
+          "appreciated_home_value": 734664.0384000003
+        }
+      ]
+    },
+    {
+      "_id": 26,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 6
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:04.270Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 6
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 27,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 6
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:04.520Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 6
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 28,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 6
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:04.790Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 6
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 88900,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 411100,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 29,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 6
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:05.059Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 6
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 111904.06,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 517477.59,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 629381.6451073335
+        }
+      ]
+    },
+    {
+      "_id": 30,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 6
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:05.309Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 6
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 141073.13,
+            "percent": 0.1778
+          },
+          "homeowner_share": {
+            "dollars": 652364.03,
+            "percent": 0.8222
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 793437.1614720003
+        }
+      ]
+    },
+    {
+      "_id": 31,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 7
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:05.561Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 7
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 32,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 7
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:05.814Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 7
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 33,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 7
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:06.064Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 7
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 100000,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 400000,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 34,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 7
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:06.326Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 7
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 130798.09,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 523192.38,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 653990.4674310302
+        }
+      ]
+    },
+    {
+      "_id": 35,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 7
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:06.607Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 7
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 171382.43,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 685529.7,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 856912.1343897604
+        }
+      ]
+    },
+    {
+      "_id": 36,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 8
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:06.867Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 8
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 37,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 8
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:07.132Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 8
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 38,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 8
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:07.386Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 8
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 100000,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 400000,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 39,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 8
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:07.635Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 8
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 135912.3,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 543649.19,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 679561.4947075834
+        }
+      ]
+    },
+    {
+      "_id": 40,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 8
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:07.883Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 8
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 185093.02,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 740372.09,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 925465.1051409412
+        }
+      ]
+    },
+    {
+      "_id": 41,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 9
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:08.140Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 9
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 42,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 9
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:08.398Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 9
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 43,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 9
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:08.660Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 9
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 100000,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 400000,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 44,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 9
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:08.906Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 9
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 141226.47,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 564905.88,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 706132.34915065
+        }
+      ]
+    },
+    {
+      "_id": 45,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 9
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:09.168Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 9
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 199900.46,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 799601.85,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 999502.3135522166
+        }
+      ]
+    },
+    {
+      "_id": 46,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 10
+            },
+            "label": "Large Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:09.414Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 10
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.08
+          },
+          "label": "Large Decline",
+          "hometap_share": {
+            "dollars": 69000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 391000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 460000
+        }
+      ]
+    },
+    {
+      "_id": 47,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 10
+            },
+            "label": "Moderate Decline",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": -0.04
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:09.661Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 10
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": -0.04
+          },
+          "label": "Moderate Decline",
+          "hometap_share": {
+            "dollars": 72000,
+            "percent": 0.15
+          },
+          "homeowner_share": {
+            "dollars": 408000,
+            "percent": 0.85
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 480000
+        }
+      ]
+    },
+    {
+      "_id": 48,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 10
+            },
+            "label": "No Change",
+            "appreciation_percent": {
+              "annualized": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:09.921Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 10
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": false,
+            "value": 0
+          },
+          "label": "No Change",
+          "hometap_share": {
+            "dollars": 100000,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 400000,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 500000
+        }
+      ]
+    },
+    {
+      "_id": 49,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 10
+            },
+            "label": "Moderate appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.0391
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:10.179Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 10
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.0391
+          },
+          "label": "Moderate appreciation",
+          "hometap_share": {
+            "dollars": 146748.42,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 586993.7,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 733742.1240024404
+        }
+      ]
+    },
+    {
+      "_id": 50,
+      "_url": "https://www.hometap.com/api/calculator",
+      "_method": "POST",
+      "_requestBody": {
+        "scenarios": [
+          {
+            "idx": 1,
+            "investment_amount": 50000,
+            "product_id": "HEI-3T-10Y-2M",
+            "starting_home_value": 500000,
+            "effective_period": {
+              "unit": "years",
+              "length": 10
+            },
+            "label": "High appreciation",
+            "appreciation_percent": {
+              "annualized": true,
+              "value": 0.08
+            }
+          }
+        ]
+      },
+      "_timestamp": "2026-02-21T19:40:10.437Z",
+      "scenarios": [
+        {
+          "idx": 1,
+          "starting_home_value": 500000,
+          "investment_amount": 50000,
+          "effective_period": {
+            "unit": "years",
+            "length": 10
+          },
+          "product_id": "HEI-3T-10Y-2M",
+          "appreciation_percent": {
+            "annualized": true,
+            "value": 0.08
+          },
+          "label": "High appreciation",
+          "hometap_share": {
+            "dollars": 215892.5,
+            "percent": 0.2
+          },
+          "homeowner_share": {
+            "dollars": 863570,
+            "percent": 0.8
+          },
+          "is_share_capped": false,
+          "crr_percent": 20,
+          "appreciated_home_value": 1079462.498636394
+        }
+      ]
+    }
+  ]
+}
