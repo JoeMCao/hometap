@@ -2,6 +2,7 @@
   "name": "hometap-calculator-extractor",
   "version": "1.0.0",
   "description": "Extract Hometap pricing calculator responses for all investment length and appreciation scenario combinations",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "extract": "node extract-calculator-responses.js",

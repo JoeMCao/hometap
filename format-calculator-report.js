@@ -21,6 +21,9 @@ const REPORT_HTML = join(__dirname, "calculator-report.html");
 const HOMETAP_CALCULATOR_PAGE =
   "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator";
 
+/** Calendar date when this analysis / write-up was published (update when you ship a new version). */
+const ANALYSIS_PUBLISHED_DATE = "April 16, 2026";
+
 function main() {
   const raw = readFileSync(INPUT_FILE, "utf8");
   const data = JSON.parse(raw);
@@ -93,9 +96,15 @@ function main() {
   }).format(tableMtime);
 
   let extractedLabel = "unknown (no extractedAt in JSON)";
+  let extractedDateCalendar = "—";
   if (data.extractedAt) {
     const d = new Date(data.extractedAt);
     extractedLabel = `${d.toISOString().replace("T", " ").slice(0, 19)} UTC`;
+    extractedDateCalendar = new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(d);
   }
 
   // --- Chart data for HTML ---
@@ -172,6 +181,7 @@ function main() {
   <style>
     body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 24px; background: #f8f9fa; }
     h1 { color: #1a1a2e; margin-bottom: 8px; }
+    .report-source { font-size: 13px; color: #4a5568; line-height: 1.4; margin: 0 0 14px 0; padding: 10px 12px; background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre-line; }
     .report-intro { color: #4a5568; font-size: 16px; line-height: 1.5; max-width: 52rem; margin: 0 0 20px 0; }
     .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
     .meta code { font-size: 12px; background: #e2e8f0; padding: 1px 6px; border-radius: 4px; }
@@ -197,8 +207,11 @@ function main() {
 </head>
 <body>
   <h1>HomeTap Calculator Report</h1>
+  <pre class="report-source">Source: HomeTap public calculator
+Data extracted: ${extractedDateCalendar}
+Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
   <p class="report-intro">Report generated using the data published by HomeTap about their home equity loan.</p>
-  <p class="meta">Source: calculator-responses.json · <strong>Data extracted:</strong> ${extractedLabel} (<code>extractedAt</code> in JSON) · <strong>Report and table generated:</strong> ${generatedLabel} (when <code>calculator-table.csv</code> was written this run) · Time period: 1–10 years · 5 appreciation scenarios</p>
+  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: ${extractedLabel} · Report built: ${generatedLabel} · Time period: 1–10 years · 5 appreciation scenarios</p>
 
   <div class="summary">
     <div class="summary-card">
