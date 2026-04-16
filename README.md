@@ -12,7 +12,7 @@ This analysis focuses on understanding the system first—so product decisions a
 
 This project reverse-engineers HomeTap’s equity product to understand how **time, market conditions, and user behavior** impact investor returns.
 
-👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology). After cloning, open `calculator-report.html` locally in a browser.
+👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology)
 ---
 
 ## Product context
@@ -65,12 +65,16 @@ Even when Hometap’s share % stabilizes, IRR continues to decline over time.
 
 → The same product behaves like different asset classes depending on market conditions.
 
+---
+
 ### 6. Downside scenarios create strategic optionality for the homeowner
 In declining price scenarios, the homeowner’s obligation is based on a reduced home value.
 
 → This creates a potential incentive to settle during downturns, depending on contract terms and future price expectations.
 
 → The product embeds a form of **market-timing optionality** for the homeowner.
+
+---
 
 ### 7. The product behaves like a time-dependent equity option
 HomeTap’s payoff structure resembles an embedded option on home value, where:
