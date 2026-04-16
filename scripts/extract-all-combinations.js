@@ -4,15 +4,20 @@
  * Uses the known 5 appreciation scenarios and the calculator API request payload
  * format. Calls POST /api/calculator for each (year, scenario) combination.
  *
- * Run: node extract-all-combinations.js
+ * Run: npm run extract:all
  */
 
 import { writeFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 
 const CALCULATOR_URL =
   "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator";
 const API_URL = "https://www.hometap.com/api/calculator";
-const OUTPUT_FILE = "calculator-responses.json";
+const OUTPUT_FILE = join(ROOT, "data", "calculator-responses.json");
 
 const YEARS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

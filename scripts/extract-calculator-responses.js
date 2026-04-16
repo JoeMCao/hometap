@@ -11,10 +11,15 @@
 
 import puppeteer from "puppeteer";
 import { writeFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 
 const CALCULATOR_URL =
   "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator";
-const OUTPUT_FILE = "calculator-responses.json";
+const OUTPUT_FILE = join(ROOT, "data", "calculator-responses.json");
 const HEADED = process.env.HEADED === "1";
 
 /** Match response that looks like the calculator API (JSON with "scenarios" array) */

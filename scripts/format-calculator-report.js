@@ -1,11 +1,11 @@
 /**
- * Format calculator-responses.json into a table and build charts.
- * Outputs: calculator-table.csv, calculator-report.html
+ * Format data/calculator-responses.json into a table and build charts.
+ * Outputs: data/calculator-table.csv, calculator-report.html (repo root).
  *
  * Charts: X = time period (years 1–10), Y = Hometap share ($ and %).
  * One line per appreciation scenario.
  *
- * Run: node format-calculator-report.js
+ * Run: npm run report
  */
 
 import { readFileSync, writeFileSync, statSync } from "fs";
@@ -13,9 +13,10 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const INPUT_FILE = join(__dirname, "calculator-responses.json");
-const TABLE_CSV = join(__dirname, "calculator-table.csv");
-const REPORT_HTML = join(__dirname, "calculator-report.html");
+const ROOT = join(__dirname, "..");
+const INPUT_FILE = join(ROOT, "data", "calculator-responses.json");
+const TABLE_CSV = join(ROOT, "data", "calculator-table.csv");
+const REPORT_HTML = join(ROOT, "calculator-report.html");
 
 /** Public calculator this project mirrors (same home_value query as extractors). */
 const HOMETAP_CALCULATOR_PAGE =
@@ -232,7 +233,7 @@ function main() {
 Data extracted: ${extractedDateCalendar}
 Analysis date: ${ANALYSIS_PUBLISHED_DATE}</pre>
   <p class="report-intro">Report generated using the data published by HomeTap about their home equity loan.</p>
-  <p class="meta">Snapshot: <code>calculator-responses.json</code> · <code>extractedAt</code>: ${extractedLabel} · Report built: ${generatedLabel} · Time period: 1–10 years · 5 appreciation scenarios</p>
+  <p class="meta">Snapshot: <code>data/calculator-responses.json</code> · <code>extractedAt</code>: ${extractedLabel} · Report built: ${generatedLabel} · Time period: 1–10 years · 5 appreciation scenarios</p>
 
   <div class="summary">
     <div class="summary-card">

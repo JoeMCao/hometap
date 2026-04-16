@@ -9,6 +9,18 @@ This project focuses on understanding the **economic engine** behind HomeTap’s
 → Growth without geographic discipline can turn a high-return product into a low-return asset.
 
 👉 **[View the report](https://joemcao.github.io/hometap/calculator-report.html)** (charts, tables, and methodology)
+
+### Repository layout
+
+| Path | Purpose |
+|------|---------|
+| [`scripts/`](./scripts/) | Extractors and report builder (`npm run extract`, `extract:all`, `report`, etc.) |
+| [`data/`](./data/) | Snapshot `calculator-responses.json` and generated `calculator-table.csv` |
+| [`calculator-report.html`](./calculator-report.html) | Generated HTML report (kept at repo root for GitHub Pages) |
+| [`assets/`](./assets/) | Images referenced by this README (add files here as needed) |
+
+After cloning: `npm install` → optional `npm run extract:all` to refresh data → `npm run report` to regenerate the HTML and CSV.
+
 ---
 
 ## Product context

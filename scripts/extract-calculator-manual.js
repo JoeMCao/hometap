@@ -3,16 +3,21 @@
  * while you change length and appreciation in the UI. Press Enter in the
  * terminal when done to save.
  *
- * Run: node extract-calculator-manual.js
+ * Run: npm run extract:manual
  */
 
 import puppeteer from "puppeteer";
 import { writeFileSync } from "fs";
 import { createInterface } from "readline";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 
 const CALCULATOR_URL =
   "https://www.hometap.com/how-it-works?home_value=500000#how-it-works-calculator";
-const OUTPUT_FILE = "calculator-responses.json";
+const OUTPUT_FILE = join(ROOT, "data", "calculator-responses.json");
 
 function isCalculatorResponse(body) {
   if (!body || typeof body !== "string") return false;

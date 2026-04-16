@@ -5,11 +5,11 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "extract": "node extract-calculator-responses.js",
-    "extract:headed": "HEADED=1 node extract-calculator-responses.js",
-    "extract:manual": "node extract-calculator-manual.js",
-    "extract:all": "node extract-all-combinations.js",
-    "report": "node format-calculator-report.js"
+    "extract": "node scripts/extract-calculator-responses.js",
+    "extract:headed": "HEADED=1 node scripts/extract-calculator-responses.js",
+    "extract:manual": "node scripts/extract-calculator-manual.js",
+    "extract:all": "node scripts/extract-all-combinations.js",
+    "report": "node scripts/format-calculator-report.js"
   },
   "dependencies": {
     "puppeteer": "^23.0.0"
